@@ -1,0 +1,28 @@
+.countries {
+    display: grid;
+    /* Mobile first: 1 column, expands to more on larger screens */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+/* Tablet: 2 columns */
+@media (min-width: 600px) {
+    .countries {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+    .countries {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large Screens: 4 columns */
+@media (min-width: 1400px) {
+    .countries {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

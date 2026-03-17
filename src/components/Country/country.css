@@ -1,0 +1,95 @@
+.country {
+    /* --- The Glassmorphism Effect --- */
+    background: rgba(255, 255, 255, 0.03); /* Extremely transparent white */
+    backdrop-filter: blur(8px); /* Frosted glass blur */
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Subtle border for glass edge */
+    border-radius: 18px; /* Rounded corners */
+    padding: 20px;
+    
+    /* --- Layout & Alignment --- */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    
+    /* --- Transitions & Interaction --- */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Deep shadow for depth */
+}
+
+/* --- Interactive States --- */
+.country:hover {
+    transform: translateY(-8px) scale(1.02); /* Pop out effect */
+    background: rgba(255, 255, 255, 0.06); /* Slightly lighter on hover */
+    border-color: rgba(0, 210, 255, 0.3); /* Cyan border glow */
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2); /* Cyan outer glow */
+}
+
+/* --- Visited State --- */
+.country-visited {
+    background: rgba(46, 204, 113, 0.05); /* Very subtle green tint */
+    border-color: #27ae60; /* Solid green border */
+    box-shadow: 0 0 20px rgba(39, 174, 96, 0.3); /* Green outer glow */
+}
+
+/* --- Flag (Image) Styling --- */
+.country img {
+    width: 100%;
+    max-width: 260px;
+    height: 160px;
+    object-fit: cover; /* Ensures no distortion */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Image specific depth */
+}
+
+/* --- Typography --- */
+.country h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.country p {
+    font-size: 0.95rem;
+    margin: 4px 0;
+    color: #b0b0b0; /* Dimmer text for secondary info */
+}
+
+/* --- Button Styling --- */
+.country button {
+    width: 100%;
+    max-width: 220px;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 25px; /* Fully rounded button */
+    
+    /* Subtle cyan gradient button */
+    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.country button:hover {
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.6); /* Button glow on hover */
+}
+
+.country button:active {
+    transform: scale(0.96); /* Feedback when clicked/tapped */
+}
+
+/* --- Update button color when visited --- */
+.country-visited button {
+    /* Green gradient button */
+    background: linear-gradient(135deg, #dd1db3 0%, #ae279c 100%);
+}
